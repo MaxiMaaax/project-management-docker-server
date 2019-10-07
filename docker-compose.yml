@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+#  jenkins:
+
+#    build: ./jenkins
+
+#    ports:
+#      - "8080:8080"
+
+
+  nginx:
+
+    build: ./nginx
+
+    network_mode: "host"
+
+  confluence:
+  
+    build: ./confluence
+ 
+
+    ports:
+      - "8090:8090"
+      - "8091:8091"
+
+  jira:
+    
+    build: ./jira
+    
+    ports:
+      - "8080:8080"
